@@ -1,0 +1,42 @@
+{
+    "mago": {
+        "nivel":1,
+      "forca": 5,
+      "magia": 15,
+      "resistencia": 8,
+      "vida": 100
+    },
+    "guerreiro": {
+        "nivel":1,
+      "forca": 12,
+      "magia": 3,
+      "resistencia": 10
+      ,
+      "vida": 100
+    },
+    "ladrao": {
+        "nivel":1,
+      "forca": 8,
+      "magia": 5,
+      "resistencia": 7
+      ,
+      "vida": 100
+    },
+    "clerigo": {
+        "nivel":1,
+      "forca": 10,
+      "magia": 12,
+      "resistencia": 9
+      ,
+      "vida": 100
+    },
+    "arqueiro": {
+        "nivel":1,
+      "forca": 9,
+      "magia": 7,
+      "resistencia": 8
+      ,
+      "vida": 100
+    }
+  }
+  

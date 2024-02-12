@@ -1,0 +1,18 @@
+.container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .link {
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  .select {
+    margin-bottom: 20px;
+  }
+  
+  .imagemPersonagem {
+    max-width: 300px;
+    margin-top: 20px;
+  }

@@ -1,0 +1,57 @@
+/* PersonagemInicial.modules.css */
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .paraPersonagem {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .imagemPersonagem {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  
+
+  /* Estilos para a lista de monstros */
+.monstros-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .monstros-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .monstros-nome {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .monstros-info {
+    margin-top: 10px;
+  }
+  
+  .monstros-info p {
+    margin: 5px 0;
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+  }
+  
+  .monstro-container {
+    animation: shake 0.5s ease infinite;
+  }
+  

@@ -5,36 +5,28 @@ import guerreiro from '../../imgs/guerreiro.jpeg';
 import ladrao from '../../imgs/ladrao.jpeg';
 import clerigo from '../../imgs/clerigo.jpeg';
 import arqueiro from '../../imgs/arqueiro.jpeg';
+import styles from '../telaInicial/EscolhaPersonagem.modules.css'
+import personagensData from './Personagem/personagem.json'
 
 export default function EscolhaPersonagem() {
     const [classe, setClasse] = useState('');
     const [atributos, setAtributos] = useState('');
 
     const classEscolhar = (event) => {
-        setClasse(event.target.value);
-        setAtributos(getAtributos(event.target.value));
+        const classeSelecionada = event.target.value;
+        setClasse(classeSelecionada);
+        setAtributos(getAtributos(classeSelecionada));
     };
 
     const getAtributos = (classe) => {
-        switch (classe) {
-            case 'mago':
-                return 'Mago:\n Força: 5, Magia: 15, Resistência: 8';
-            case 'guerreiro':
-                return 'Guerreiro:\n Força: 12, Magia: 3, Resistência: 10';
-            case 'ladrao':
-                return 'Ladrao:\n Força: 8, Magia: 5, Resistência: 7';
-            case 'clerigo':
-                return 'Clerigo:\n Força: 10, Magia: 12, Resistência: 9';
-            case 'arqueiro':
-                return 'Arqueiro:\n Força: 9, Magia: 7, Resistência: 8';
-            default:
-                return 'Selecione uma classe para ver os atributos.';
-        }
+        const atributosClasse = personagensData[classe];
+        return `Força: ${atributosClasse.forca}, Magia: ${atributosClasse.magia}, Resistência: ${atributosClasse.resistencia}`;
     };
 
     function escolherPersonagem() {
         console.log(`Sua classe escolhida é:\n${classe}`);
         localStorage.setItem("classe", classe);
+        window.location = '/'
     }
 
     let imagem;
@@ -53,22 +45,22 @@ export default function EscolhaPersonagem() {
     }
 
     return (
-        <div>
-            <Link to={"/"}>Ir para escolha de personagem</Link>
-            <h2>Escolha sua classe:</h2>
-            <select value={classe} onChange={classEscolhar}>
-                <option value="mago">Mago</option>
-                <option value="guerreiro">Guerreiro</option>
-                <option value="ladrao">Ladrão</option>
-                <option value="clerigo">Clérigo</option>
-                <option value="arqueiro">Arqueiro</option>
-            </select>
-            <div>
-                <h3>Atributos:</h3>
-                <p>{atributos}</p>
-                {imagem}
-                <button type="submit" onClick={escolherPersonagem}>Escolher</button>
+            <div className={'container'}>
+                <Link className={'link'} to={"/"}>Ir para tela</Link>
+                <h2>Escolha sua classe:</h2>
+                <select className={'select'} value={classe} onChange={classEscolhar}>
+                    <option value="mago">Mago</option>
+                    <option value="guerreiro">Guerreiro</option>
+                    <option value="ladrao">Ladrão</option>
+                    <option value="clerigo">Clérigo</option>
+                    <option value="arqueiro">Arqueiro</option>
+                </select>
+                <div>
+                    <h3>Atributos:</h3>
+                    <p>{atributos}</p>
+                    {imagem}
+                    <button type="submit" onClick={escolherPersonagem}>Escolher</button>
+                </div>
             </div>
-        </div>
     );
 }
