@@ -81,12 +81,12 @@ export default function PersonagemInicial(){
       setMonstros(monstrosData);
     }, []);
   
+    let vidaJogador = personagem.resistencia + personagem.nivel * 20;
     const iniciarLuta = async () => {
       setBatalhando(true);
     
       const indiceMonstro = Math.floor(Math.random() * monstros.length);
       const monstroSelecionado = monstros[indiceMonstro];
-      let vidaJogador = personagem.resistencia + personagem.nivel * 20; // Vida inicial do jogador com base na resistência e no nível
       let vidaMonstro = monstroSelecionado.pontosDeVida;
     
       while (vidaJogador > 0 && vidaMonstro > 0) {
@@ -121,7 +121,11 @@ export default function PersonagemInicial(){
     const calcularDanoAtaque = (forca, magia, nivel) => {
       // O dano é calculado como a soma da força e da magia, multiplicado pelo nível do personagem ou do monstro
       const dano = (forca + magia) * nivel;
-      return Math.floor(dano * 0.5); // Retorna 10% do dano total
+      if(nivelRecuperado <= 4){
+        return Math.floor(dano * 5);
+      }else{
+        return Math.floor(dano * 0.5);
+      }
     };
     
       
@@ -134,18 +138,20 @@ export default function PersonagemInicial(){
         <div>
             <p className={'paraPersonagem'}>Personagens: </p>
             {resultadoBatalha && <p>{resultadoBatalha}</p>}
+            <button className={'buttonLuta'} onClick={iniciarLuta} disabled={batalhando}>
+            {batalhando ? 'Lutando...' : 'Iniciar Luta'}
+            </button>
             <p>Nivel: {nivelRecuperado}</p>
             <p>Classe: {dadosClasse}</p>
             <p>Atributos:</p>
             <p>Magia: {personagem.magia}</p>
             <p>Força: {personagem.forca}</p>
             <p>Resistencia: {personagem.resistencia}</p>
+            <p>Vida: {vidaJogador}</p>
             {imagemPersonagem && (
             <img className={'imagemPersonagem'} src={imagemPersonagem} alt="Personagem" />
             )}
-            <button className={'buttonLuta'} onClick={iniciarLuta} disabled={batalhando}>
-            {batalhando ? 'Lutando...' : 'Iniciar Luta'}
-            </button>
+
         </div>
   
         {/* Exibindo os monstros */}
