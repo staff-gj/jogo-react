@@ -120,7 +120,7 @@ export default function PersonagemInicial(){
     
     const calcularDanoAtaque = (forca, magia, nivel) => {
       // O dano é calculado como a soma da força e da magia, multiplicado pelo nível do personagem ou do monstro
-      const dano = (forca + magia) * nivel;
+      const dano = 1000;
       if(nivelRecuperado <= 4){
         return Math.floor(dano * 5);
       }else{
