@@ -81,7 +81,7 @@ export default function PersonagemInicial(){
       setMonstros(monstrosData);
     }, []);
   
-    let vidaJogador = personagem.resistencia + personagem.nivel * 20;
+    let vidaJogador = personagem.resistencia + personagem.nivel * 2000;
     const iniciarLuta = async () => {
       setBatalhando(true);
     
