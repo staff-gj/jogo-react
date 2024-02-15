@@ -26,7 +26,7 @@ export default function PersonagemInicial(){
     const [personagem, setPersonagem] = useState({
       classe: '',
       nivel: nivelRecuperado || 1,
-      forca: forcaRecuperado || 5,
+      forca: forcaRecuperado * 8 || 5,
       magia: magiaRecuperado || 5,
       resistencia: resistenciaRecuperado || 5
   });
@@ -124,7 +124,7 @@ export default function PersonagemInicial(){
       if(nivelRecuperado <= 4){
         return Math.floor(dano * 500);
       }else{
-        return Math.floor(dano * 0.5);
+        return Math.floor(dano * 505);
       }
     };
     
@@ -132,6 +132,9 @@ export default function PersonagemInicial(){
     const delay = (ms) => {
       return new Promise(resolve => setTimeout(resolve, ms));
     };
+    function resert(){
+          localStorage.clear();
+    }
 
     return (
       <div className={'container'}>
@@ -140,6 +143,8 @@ export default function PersonagemInicial(){
             {resultadoBatalha && <p>{resultadoBatalha}</p>}
             <button className={'buttonLuta'} onClick={iniciarLuta} disabled={batalhando}>
             {batalhando ? 'Lutando...' : 'Iniciar Luta'}
+            </button>
+            <button onClick={resert}> Resert
             </button>
             <p>Nivel: {nivelRecuperado}</p>
             <p>Classe: {dadosClasse}</p>
