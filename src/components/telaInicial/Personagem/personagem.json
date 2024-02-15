@@ -25,10 +25,10 @@
     "clerigo": {
         "nivel":1,
       "forca": 10,
-      "magia": 12,
+      "magia": 20,
       "resistencia": 9
       ,
-      "vida": 100
+      "vida": 1000
     },
     "arqueiro": {
         "nivel":1,
