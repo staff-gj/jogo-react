@@ -1,62 +1,72 @@
 [
-    {
-      "nome": "Orc",
-      "pontosDeVida": 100,
-      "ataque": 15,
-      "defesa": 10
-    },
-    {
-      "nome": "Dragão",
-      "pontosDeVida": 200,
-      "ataque": 25,
-      "defesa": 20
-    },
-    {
-      "nome": "Esqueleto",
-      "pontosDeVida": 80,
-      "ataque": 12,
-      "defesa": 8
-    },
-    {
-      "nome": "Goblin",
-      "pontosDeVida": 70,
-      "ataque": 10,
-      "defesa": 5
-    },
-    {
-      "nome": "Troll",
-      "pontosDeVida": 150,
-      "ataque": 18,
-      "defesa": 15
-    },
-    {
-      "nome": "Vampiro",
-      "pontosDeVida": 120,
-      "ataque": 20,
-      "defesa": 12
-    },
-    {
-      "nome": "Cerberus",
-      "pontosDeVida": 180,
-      "ataque": 22,
-      "defesa": 18
-    },
-    {
-      "nome": "Gigante",
-      "pontosDeVida": 250,
-      "ataque": 30,
-      "defesa": 25
-    },
-    {
-      "nome": "Hidra",
-      "pontosDeVida": 220,
-      "ataque": 28,
-      "defesa": 22
-    },
-    {
-      "nome": "Espectro",
-      "pontosDeVida": 140,
-      "ataque": 17,
-      "defesa": 14
-    }
+  {
+    "nome": "Orc",
+    "pontosDeVida": 100,
+    "ataque": 15,
+    "defesa": 10,
+    "classe": "iniciante"
+  },
+  {
+    "nome": "Dragão",
+    "pontosDeVida": 200,
+    "ataque": 25,
+    "defesa": 20,
+    "classe": "mágica"
+  },
+  {
+    "nome": "Esqueleto",
+    "pontosDeVida": 80,
+    "ataque": 12,
+    "defesa": 8,
+    "classe": "iniciante"
+  },
+  {
+    "nome": "Goblin",
+    "pontosDeVida": 70,
+    "ataque": 10,
+    "defesa": 5,
+    "classe": "iniciante"
+  },
+  {
+    "nome": "Troll",
+    "pontosDeVida": 150,
+    "ataque": 18,
+    "defesa": 15,
+    "classe": "iniciante"
+  },
+  {
+    "nome": "Vampiro",
+    "pontosDeVida": 120,
+    "ataque": 20,
+    "defesa": 12,
+    "classe": "mágica"
+  },
+  {
+    "nome": "Cerberus",
+    "pontosDeVida": 180,
+    "ataque": 22,
+    "defesa": 18,
+    "classe": "física"
+  },
+  {
+    "nome": "Gigante",
+    "pontosDeVida": 250,
+    "ataque": 30,
+    "defesa": 25,
+    "classe": "física"
+  },
+  {
+    "nome": "Hidra",
+    "pontosDeVida": 220,
+    "ataque": 28,
+    "defesa": 22,
+    "classe": "mágica"
+  },
+  {
+    "nome": "Espectro",
+    "pontosDeVida": 140,
+    "ataque": 17,
+    "defesa": 14,
+    "classe": "mágica"
+  }
 ]
